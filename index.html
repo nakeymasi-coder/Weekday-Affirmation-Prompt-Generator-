@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Friday Luxury Affirmation Prompt Generator</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+background:#050505;
+font-family:Georgia, serif;
+color:white;
+padding:20px;
+}
+
+.container{
+max-width:900px;
+margin:auto;
+}
+
+.hero-image{
+width:100%;
+border:2px solid #d4af37;
+border-radius:15px;
+display:block;
+}
+
+.title{
+text-align:center;
+font-size:42px;
+color:#d4af37;
+margin-top:25px;
+margin-bottom:10px;
+}
+
+.subtitle{
+text-align:center;
+font-size:18px;
+margin-bottom:30px;
+color:#f5f5f5;
+}
+
+.btn{
+background:#d4af37;
+color:black;
+border:none;
+padding:15px 25px;
+font-size:18px;
+font-weight:bold;
+border-radius:10px;
+cursor:pointer;
+margin:8px;
+}
+
+.btn:hover{
+opacity:.9;
+}
+
+.button-wrap{
+text-align:center;
+margin-bottom:25px;
+}
+
+.output{
+background:#061a4d;
+border:2px solid #d4af37;
+border-radius:15px;
+padding:25px;
+min-height:250px;
+line-height:1.7;
+font-size:18px;
+white-space:pre-wrap;
+}
+
+.upsell{
+margin-top:30px;
+padding:30px;
+background:#061a4d;
+border:2px solid #d4af37;
+border-radius:15px;
+text-align:center;
+}
+
+.upsell h2{
+color:#d4af37;
+margin-bottom:10px;
+}
+
+.upsell p{
+margin-bottom:20px;
+font-size:18px;
+}
+
+.buy-btn{
+display:inline-block;
+background:#d4af37;
+color:black;
+padding:15px 30px;
+border-radius:10px;
+font-weight:bold;
+text-decoration:none;
+}
+
+.footer{
+text-align:center;
+margin-top:20px;
+font-size:14px;
+opacity:.8;
+}
+
+</style>
+</head>
+<body>
+
+<div class="container">
+
+<img src="friday.jpg" alt="Friday Affirmation Example" class="hero-image">
+
+<h1 class="title">Friday Luxury Prompt Generator</h1>
+
+<p class="subtitle">
+Generate luxury affirmation poster prompts inspired by the example image above.
+</p>
+
+<div class="button-wrap">
+
+<button class="btn" onclick="generatePrompt()">
+Generate Prompt
+</button>
+
+<button class="btn" onclick="copyPrompt()">
+Copy Prompt
+</button>
+
+</div>
+
+<div id="output" class="output">
+
+Click "Generate Prompt" to create your Friday image prompt.
+
+</div>
+
+<div class="upsell">
+
+<h2>Want Thousands More?</h2>
+
+<p>
+Unlock the full generator with more days, outfits, backgrounds, poses, typography styles, affirmations, and luxury design combinations.
+</p>
+
+<a href="YOUR-UPSELL-LINK-HERE" class="buy-btn">
+Unlock Full Generator
+</a>
+
+</div>
+
+<div class="footer">
+© GlamorousGrammyGlowUp
+</div>
+
+</div>
+
+<script>
+
+const affirmations = [
+
+{
+word:"Focused",
+text:"I stay focused on what truly matters."
+},
+
+{
+word:"Resilient",
+text:"I rise above every challenge with strength."
+},
+
+{
+word:"Intentional",
+text:"I move with purpose and confidence."
+},
+
+{
+word:"Deserving",
+text:"I deserve success, peace, and abundance."
+},
+
+{
+word:"Aligned",
+text:"I am aligned with opportunities meant for me."
+},
+
+{
+word:"Yes",
+text:"I say yes to growth, blessings, and new possibilities."
+}
+
+];
+
+const outfits = [
+
+"luxury royal blue jumpsuit with gold embroidery",
+"designer power suit with gold accents",
+"elegant evening dress with luxury details",
+"fashion-forward business outfit",
+"high-end glam romper with designer accessories",
+"luxury streetwear look with gold jewelry"
+
+];
+
+const backgrounds = [
+
+"Chicago skyline at sunset",
+"luxury rooftop lounge overlooking the city",
+"high-rise penthouse balcony",
+"glamorous waterfront skyline",
+"downtown city lights at dusk",
+"luxury urban skyline with golden reflections"
+
+];
+
+const poses = [
+
+"standing confidently with hands on hips",
+"holding a luxury handbag",
+"walking forward with confidence",
+"leaning against a balcony rail",
+"power pose with a bold expression",
+"looking directly into the camera"
+
+];
+
+const typography = [
+
+"large gold luxury typography",
+"editorial magazine style lettering",
+"premium gold foil text",
+"luxury serif typography",
+"high-end inspirational poster typography"
+
+];
+
+function randomItem(array){
+
+return array[Math.floor(Math.random()*array.length)];
+
+}
+
+function generatePrompt(){
+
+const affirmation = randomItem(affirmations);
+
+const prompt =
+
+`Create a luxury Friday affirmation poster featuring a confident plus-size Black woman.
+
+WARDROBE:
+${randomItem(outfits)}
+
+POSE:
+${randomItem(poses)}
+
+BACKGROUND:
+${randomItem(backgrounds)}
+
+COLOR PALETTE:
+Royal blue, gold, black, and subtle white accents.
+
+TYPOGRAPHY:
+${randomItem(typography)}
+
+DAY:
+Friday
+
+AFFIRMATION TITLE:
+"${affirmation.word}"
+
+AFFIRMATION:
+"${affirmation.text}"
+
+STYLE:
+Luxury editorial poster, elegant glamour aesthetic, polished professional branding, cinematic lighting, glossy textures, sophisticated details, inspirational social media artwork, premium design quality, ultra detailed, high-end magazine look, vertical 9:16 format.
+
+The final image should feel bold, classy, feminine, empowering, expensive, and professionally branded. No crowns, no fake dashboards, no graph bars, no futuristic overlays, no clutter.`;
+
+document.getElementById("output").textContent = prompt;
+
+}
+
+function copyPrompt(){
+
+const text =
+document.getElementById("output").textContent;
+
+navigator.clipboard.writeText(text);
+
+alert("Prompt copied!");
+
+}
+
+</script>
+
+</body>
+</html>

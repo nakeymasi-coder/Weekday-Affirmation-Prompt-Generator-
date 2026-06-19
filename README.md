@@ -1,1 +1,0 @@
-# Weekday-Affirmation-Prompt-Generator-
