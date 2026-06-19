@@ -255,45 +255,99 @@ return array[Math.floor(Math.random()*array.length)];
 
 function generatePrompt(){
 
-const affirmation = randomItem(affirmations);
-
 const prompt =
 
-`Create a luxury Friday affirmation poster featuring a confident plus-size Black woman.
+`Create a premium luxury affirmation poster in a sophisticated editorial magazine style.
+
+FEATURED CHARACTER:
+Confident plus-size Black woman with flawless glam makeup, luxury hairstyle, polished nails, elegant designer accessories, standing full body and looking directly into the camera.
 
 WARDROBE:
-${randomItem(outfits)}
+${randomItem(outfits)},
+luxury handbag,
+statement jewelry,
+fashion-forward footwear.
 
-POSE:
-${randomItem(poses)}
-
-BACKGROUND:
-${randomItem(backgrounds)}
+ENVIRONMENT:
+Luxury rooftop lounge overlooking ${randomItem(backgrounds)}.
+Rich atmosphere with velvet seating,
+stacked inspirational books,
+marble flooring,
+subtle gold décor,
+warm city lights,
+upscale feminine details.
 
 COLOR PALETTE:
-Royal blue, gold, black, and subtle white accents.
+Royal blue, gold, black, and soft white accents.
+
+LAYOUT:
+Professional two-panel luxury affirmation layout.
+
+LEFT PANEL:
+Large gold foil "Happy Friday" headline.
+Feature the full-body character as the focal point.
+Include elegant luxury décor elements and skyline views.
+
+RIGHT PANEL:
+Create the word FRIDAY vertically in oversized premium gold foil letters.
+
+F — Focused
+I stay focused on what truly matters.
+
+R — Resilient
+I rise above every challenge with strength.
+
+I — Intentional
+I move with purpose and confidence.
+
+D — Deserving
+I deserve success, peace, and abundance.
+
+A — Aligned
+I am aligned with opportunities meant for me.
+
+Y — Yes
+I say yes to growth, blessings, and new possibilities.
+
+FOOTER:
+Elegant framed luxury quote box featuring:
+
+"The work you did this week is planting seeds for tomorrow's success."
 
 TYPOGRAPHY:
-${randomItem(typography)}
-
-DAY:
-Friday
-
-AFFIRMATION TITLE:
-"${affirmation.word}"
-
-AFFIRMATION:
-"${affirmation.text}"
+${randomItem(typography)},
+luxury gold foil typography,
+editorial magazine styling,
+elegant script accents,
+premium spacing,
+sophisticated hierarchy.
 
 STYLE:
-Luxury editorial poster, elegant glamour aesthetic, polished professional branding, cinematic lighting, glossy textures, sophisticated details, inspirational social media artwork, premium design quality, ultra detailed, high-end magazine look, vertical 9:16 format.
+Luxury affirmation artwork,
+upscale feminine branding,
+cinematic lighting,
+glossy textures,
+polished details,
+premium printable design,
+professional social media artwork,
+high-end magazine quality,
+ultra detailed,
+vertical 9:16 format.
 
-The final image should feel bold, classy, feminine, empowering, expensive, and professionally branded. No crowns, no fake dashboards, no graph bars, no futuristic overlays, no clutter.`;
+NEGATIVE PROMPT:
+No crowns,
+no tiaras,
+no fake dashboards,
+no graph bars,
+no futuristic overlays,
+no clutter,
+no AI HUD elements,
+no corporate infographic styling,
+no watermarks.`;
 
 document.getElementById("output").textContent = prompt;
 
 }
-
 function copyPrompt(){
 
 const text =
